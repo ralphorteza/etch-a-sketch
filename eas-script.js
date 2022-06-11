@@ -12,6 +12,10 @@ function makeGrid() {
     }
     container.appendChild(row);
   }
+
+  div.addEventListener('mouseover', e => 
+    e.target.classList.add('color-class')
+  );
 }
 
 makeGrid();

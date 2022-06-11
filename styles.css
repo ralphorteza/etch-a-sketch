@@ -12,6 +12,11 @@
   flex: 1;
   aspect-ratio: 1 / 1; /* Creates box to be square. */
 
-  background-color: grey;
-  border: 1px solid black;
+/*   color: white; */
+  border: 1px solid grey;
 }
+
+.color-class {
+  background-color: black;
+}
+
