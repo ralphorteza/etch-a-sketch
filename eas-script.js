@@ -1,21 +1,25 @@
-const container = document.querySelector('#container');
+const container = document.querySelector('.container');
 
 // Creates a 16x16 grid of divs inside 'container' div.
 function makeGrid() {
   for (let i=0; i<16; i++) {
-    const row = document.createElement('div');
-    row.className = "row " + i;
+    let row = document.createElement('div');
+    row.classList = "row";
     for (let j=0; j<16; j++) {
       const box = document.createElement('div');
-      box.className = "box " + j;
+      box.classList = "box";
       row.appendChild(box);
     }
     container.appendChild(row);
   }
 
-  div.addEventListener('mouseover', e => 
-    e.target.classList.add('color-class')
-  );
+  
+}
+
+function changeColor(event) {
+  event.target.style.backgroundColor = "black";
 }
 
 makeGrid();
+const gridBoxList = document.querySelectorAll('.box');
+gridBoxList.forEach(box => {box.addEventListener("mouseover", changeColor)});
